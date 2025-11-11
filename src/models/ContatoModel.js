@@ -18,11 +18,6 @@ function Contato(body){
   this.contato = null;
 } 
 
-Contato.buscaPorId = async function(id){
-  if (typeof id !== 'string') return;
-  const user = await ContatoModel.findById(id)
-  return user;
-};
 Contato.prototype.register = async function(){ // trabalha direto com o db entt é async await
   this.valida();
   if(this.errors.length > 0) return;
@@ -62,5 +57,27 @@ this.body= {
     if(this.errors.length > 0 ) return;
     this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, {new: true}); // parametro é o id q o corpo q ta recebendo da req do user, o new true serve pra mostrar sempre o novo
   }
+
+  Contato.buscaPorId = async function(id){
+  if (typeof id !== 'string') return;
+  const contato = await ContatoModel.findById(id)
+  return contato;
+};
+
+  Contato.buscaContatos = async function(){
+  const contatos = await ContatoModel.find()
+    .sort({criadoEm: -1})
+  return contatos;
+};
+Contato.deleteById = async function (id) {
+  try {
+    if (!id || typeof id !== 'string') return null;
+    const contato = await ContatoModel.findByIdAndDelete(id);
+    return contato;
+  } catch (err) {
+    console.log('Erro ao deletar contato:', err);
+    return null;
+  }
+}
 
 module.exports = Contato

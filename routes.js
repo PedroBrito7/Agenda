@@ -16,10 +16,11 @@ route.post('/login/register', loginController.register);
 route.post('/login/login', loginController.login);
 route.get('/login/logout', loginController.logout);
 //rotas de contato
-route.get('/contato/login',loginRequired, contatoController.index); // coloca o midwalere antes de abrir a page
+route.get('/contato/index',loginRequired, contatoController.index); // coloca o midwalere antes de abrir a page
 route.post('/contato/register',loginRequired, contatoController.register); 
-route.get('/contato/index/:id',loginRequired, contatoController.editIndex);
-route.post('/contato/edit/:id',loginRequired, contatoController.edit);
+route.get('/contato/index/:id', loginRequired, contatoController.editIndex);
+route.post('/contato/edit/:id', loginRequired, contatoController.edit);
+route.get('/contato/delete/:id', loginRequired, contatoController.delete);
 
  
 module.exports = route;
