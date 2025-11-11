@@ -55,4 +55,12 @@ this.body= {
   telefone: this.body.telefone,
 }
   }
-module.exports = Contato;
+
+  Contato.prototype.edit = async function (id) {
+    if(typeof id !=='string') return;
+    this.valida();
+    if(this.errors.length > 0 ) return;
+    this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, {new: true}); // parametro é o id q o corpo q ta recebendo da req do user, o new true serve pra mostrar sempre o novo
+  }
+
+module.exports = Contato
