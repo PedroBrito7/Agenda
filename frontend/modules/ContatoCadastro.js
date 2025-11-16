@@ -66,7 +66,7 @@ export default class ContatoCadastro {
     error = true;
   }
 if (!telRegex.test(telefoneInput.value)) {
-  alert('Número inválido');
+  alert('Número inválido !');
 }
 
   if (!error) {
