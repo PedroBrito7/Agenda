@@ -24,7 +24,7 @@ O objetivo é permitir o cadastro, edição, visualização e exclusão de conta
 - **controllers** → lógica das rotas  
 - **models** → schemas do Mongoose  
 - **routes** → rotas organizadas  
-- **views** → templates EJS  
+- **views** → templates EJS + HTML
 
 ---
 
