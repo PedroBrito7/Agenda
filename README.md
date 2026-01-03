@@ -1,4 +1,4 @@
-# 📒 Agenda – CRUD com Node.js, Express e EJS
+# 📒 Agenda – Node.js, Express e MongoDB
 
 Um sistema de agenda de contatos desenvolvido em **Node.js**, utilizando **Express**, **EJS** e **MongoDB**, seguindo boas práticas de organização e arquitetura.  
 O objetivo é permitir o cadastro, edição, visualização e exclusão de contatos de forma simples e eficiente.
@@ -44,7 +44,7 @@ O objetivo é permitir o cadastro, edição, visualização e exclusão de conta
 
 Clone o repositório:
 
-git clone <cole o link aqui >
+git clone (https://github.com/PedroBrito7/Agenda/)
 
 Instale as dependências:
 npm install
@@ -80,8 +80,8 @@ Código modular e organizado
 
 Templates EJS reutilizáveis
 
-☁️ Deploy no Google Cloud Platform (GCP)
-O projeto foi implantado no Google Cloud Platform (GCP) utilizando uma instância configurada para rodar aplicações Node.js em produção.
+☁️ Deploy na AWS (AWS)
+O projeto foi implantado na Amazon Web Services (AWS) utilizando uma instância configurada para rodar aplicações Node.js.
 
 Boas práticas aplicadas:
 
